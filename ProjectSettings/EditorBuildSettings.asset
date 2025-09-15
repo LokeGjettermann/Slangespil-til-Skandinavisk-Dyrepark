@@ -6,8 +6,23 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Content/Scenes/LoadingScene.unity
+    guid: d267b17c28096244aadadaceaa563f2c
+  - enabled: 1
+    path: Assets/Content/Scenes/Main Game.unity
+    guid: 223b30296534665499eac1f00ae422e6
+  - enabled: 0
     path: Assets/Content/Scenes/SampleScene.unity
     guid: 8c9cfa26abfee488c85f1582747f6a02
+  - enabled: 1
+    path: Assets/Content/Scenes/Main menu.unity
+    guid: 83d34ba9cb727c1458d97e953f379087
+  - enabled: 1
+    path: Assets/Content/Scenes/Sorting minigame.unity
+    guid: 9ba672be4243e834493995bc8d8604bd
+  - enabled: 1
+    path: Assets/Content/Scenes/UI.unity
+    guid: daa49129b91e8134eb965813b83c1aba
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_UseUCBPForAssetBundles: 0
