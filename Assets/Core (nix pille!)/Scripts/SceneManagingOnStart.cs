@@ -9,22 +9,22 @@ public class sceneManaging : MonoBehaviour
     [Header("Main scene")]
     [SerializeField]
     [Tooltip("No switch for this one, Main Scene is what holds everything else, so should always be activated.")]
-    string mainSceneName = "Main Game";
+    private string mainSceneName = "Main Game";
     [Header ("Menu")]
     [SerializeField]
-    string mainMenuSceneName = "Main menu";
+    private string mainMenuSceneName = "Main menu";
     [SerializeField]
-    bool activateMainMenu = false;
+    private bool activateMainMenu = false;
     [Header("UI")]
     [SerializeField]
-    string uiSceneName = "UI";
+    private string uiSceneName = "UI";
     [SerializeField]
-    bool activateUI = true;
+    private bool activateUI = true;
     [Header("Sorting minigame")]
     [SerializeField]
-    string sortingGameSceneName = "Sorting minigame";
+    private string sortingGameSceneName = "Sorting minigame";
     [SerializeField]
-    bool activateSortingGame = false;
+    private bool activateSortingGame = false;
     #endregion
     #region Methods
     private IEnumerator Start()
