@@ -22,7 +22,7 @@ public class sceneManaging : MonoBehaviour
     bool activateUI = true;
     [Header("Sorting minigame")]
     [SerializeField]
-    string sortingGameSceneName = "Sorting game";
+    string sortingGameSceneName = "Sorting minigame";
     [SerializeField]
     bool activateSortingGame = false;
     #endregion
