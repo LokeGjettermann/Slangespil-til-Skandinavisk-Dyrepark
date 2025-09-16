@@ -1,14 +1,12 @@
 using UnityEngine;
 
-public class CardBehaviour : MonoBehaviour
+public class ListBehaviour : MonoBehaviour
 {
-    [SerializeField] private CardData_SO cardData;
-
+    [SerializeField] private CardList_SO cardList;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        
-        
+        gameObject.GetComponent<SpriteRenderer>().sprite = cardList.ChooseSprite();
     }
 
     // Update is called once per frame
