@@ -149,6 +149,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1fb8a79b32df347438d1f5f91437d394, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::UserInput
+  screenCenter: 0
+  doRotation: 1
+  rotationMultiplier: 5
+  dragMultiplier: 0.005
+  movementMultiplier: 0.05
+  answerDistance: 6
+  destructionDistance: 12
 --- !u!212 &1421695060
 SpriteRenderer:
   m_ObjectHideFlags: 0
