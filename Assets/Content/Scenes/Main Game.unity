@@ -167,8 +167,8 @@ MonoBehaviour:
   SFXVolume: 1
   musicVolume: 1
   soundEffects: []
-  menuMusic: {fileID: 8300000, guid: 4f2b784f595a55447ab97beffa707919, type: 3}
-  sortingGameMusic: {fileID: 8300000, guid: 8e140b15054c8fa4c9bda8a0a1bcc3e0, type: 3}
+  menuMusic: {fileID: 0}
+  sortingGameMusic: {fileID: 0}
   sortingGameEndMusic: {fileID: 0}
   mainCamera: {fileID: 2106689623}
 --- !u!1 &2106689621
