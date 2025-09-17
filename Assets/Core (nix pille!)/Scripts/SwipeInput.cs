@@ -45,7 +45,12 @@ public class UserInput : MonoBehaviour
         if (isPressed)
         {
             //Debug.Log("thing pressed");
-            lastCursorPos = Mouse.current.position.ReadValue() + Touchscreen.current.position.ReadValue();
+            lastCursorPos = Mouse.current.position.ReadValue();// + Touchscreen.current.position.ReadValue();
+            try
+            {
+                lastCursorPos += Touchscreen.current.position.ReadValue();
+            }
+            catch { }
             input.User.Drag.performed += OnDrag;
         }
         else
@@ -56,7 +61,12 @@ public class UserInput : MonoBehaviour
     }
     private void OnDrag(InputAction.CallbackContext context)
     {
-        Vector2 newCursorPos = Mouse.current.position.ReadValue() + Touchscreen.current.position.ReadValue();
+        Vector2 newCursorPos = Mouse.current.position.ReadValue(); //+ Touchscreen.current.position.ReadValue();
+        try
+        {
+            newCursorPos += Touchscreen.current.position.ReadValue();
+        }
+        catch { }
         Vector2 cursorDelta = newCursorPos - lastCursorPos;
 
         if (cursorDelta.x != 0)
