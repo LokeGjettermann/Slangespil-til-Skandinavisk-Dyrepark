@@ -130,6 +130,7 @@ GameObject:
   - component: {fileID: 1421695061}
   - component: {fileID: 1421695060}
   - component: {fileID: 1421695059}
+  - component: {fileID: 1421695062}
   m_Layer: 0
   m_Name: Square
   m_TagString: Untagged
@@ -229,6 +230,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1421695062
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1421695058}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0a1bcc312ca8b6d4887e2402b32cec78, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Scoring
+  snakeType: 0
 --- !u!1 &1832431983
 GameObject:
   m_ObjectHideFlags: 0
@@ -299,7 +313,7 @@ AudioListener:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1832431983}
-  m_Enabled: 1
+  m_Enabled: 0
 --- !u!20 &1832431986
 Camera:
   m_ObjectHideFlags: 0

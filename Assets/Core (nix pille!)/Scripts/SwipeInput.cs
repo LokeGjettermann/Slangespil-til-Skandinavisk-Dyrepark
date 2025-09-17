@@ -1,11 +1,13 @@
 using System;
 using Unity.Mathematics;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
 public class UserInput : MonoBehaviour
 {
     private UserInputAction input;
+    private Scoring scoring;
     private Vector2 lastCursorPos = Vector2.zero;
     private bool isPressed = false;
     [SerializeField][Tooltip("The objects resting-point.")] private float screenCenter = 0;
@@ -23,6 +25,7 @@ public class UserInput : MonoBehaviour
     private void OnEnable()
     {
         //Debug.Log(screenCenter + " | " + gameObject.transform.position.x);
+        scoring = gameObject.GetComponent<Scoring>();
         input = new UserInputAction();
         input.User.Enable();
 
@@ -93,7 +96,7 @@ public class UserInput : MonoBehaviour
 
         if (Mathf.Abs(distance) > destructionDistance)
         {
-            TempAnswer(distance < 0);
+            Answer(distance < 0);
             Destroy(gameObject);
         }
 
@@ -110,8 +113,15 @@ public class UserInput : MonoBehaviour
     }
 
 
-    public void TempAnswer(bool answer)
+    public void Answer(bool side)
     {
-        Debug.Log(answer);
+        if (side)
+        {
+            scoring.Answer(SnakeType.Snog);
+        }
+        else
+        {
+            scoring.Answer(SnakeType.Hugorm);
+        }
     }
 }
