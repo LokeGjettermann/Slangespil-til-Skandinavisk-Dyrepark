@@ -169,7 +169,9 @@ MonoBehaviour:
   uiSceneName: UI
   activateUI: 1
   sortingGameSceneName: Sorting minigame
-  activateSortingGame: 1
+  activateSortingGame: 0
+  inputTestSceneName: input test
+  activateInputTest: 1
 --- !u!1 &1056869606
 GameObject:
   m_ObjectHideFlags: 0
