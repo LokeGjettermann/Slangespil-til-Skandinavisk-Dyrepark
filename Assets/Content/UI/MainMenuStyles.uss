@@ -8,6 +8,7 @@
     align-self: auto;
     align-content: center;
     -unity-background-scale-mode: scale-to-fit;
+    width: 70%;
 }
 
 .menuBtnIcon {
@@ -20,4 +21,11 @@
     flex-grow: 1;
     flex-shrink: 1;
     background-size: contain;
+}
+
+.languageBtn {
+    background-size: 100% 100%;
+    height: 30%;
+    -unity-background-scale-mode: scale-and-crop;
+    width: 25%;
 }

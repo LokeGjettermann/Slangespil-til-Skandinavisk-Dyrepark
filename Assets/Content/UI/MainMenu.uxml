@@ -1,15 +1,28 @@
 <ui:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
     <Style src="project://database/Assets/Content/UI/MainMenuStyles.uss?fileID=7433441132597879392&amp;guid=30b60d935ea6a174eb9281fa8ae4a334&amp;type=3#MainMenuStyles" />
-    <ui:VisualElement name="Canvas" style="flex-grow: 1;">
-        <ui:VisualElement name="StartMenu" style="flex-grow: 1; width: 20%; align-self: center;">
+    <ui:VisualElement name="Canvas" style="flex-grow: 1; flex-direction: row;">
+        <ui:VisualElement name="StartMenu" style="flex-grow: 1; width: 20%; align-self: center; margin-left: 20%;">
             <ui:Button name="StartGameBtn" class="menuBtn">
                 <ui:Label text="Start" />
                 <ui:VisualElement name="StartBtnIcon" class="menuBtnIcon" style="background-image: url(&quot;project://database/Assets/Content/Sprites%20&amp;%20Animations/playIcon.png?fileID=2800000&amp;guid=c143fa338523f514e932978219c2b8d1&amp;type=3#playIcon&quot;); -unity-background-scale-mode: scale-to-fit; -unity-slice-left: 0; -unity-slice-top: 0; -unity-slice-right: 0; -unity-slice-bottom: 0; -unity-slice-type: sliced; opacity: 1;" />
+            </ui:Button>
+            <ui:Button name="SettingsBtn" class="menuBtn">
+                <ui:Label text="Settings" />
+                <ui:VisualElement name="SettingsBtnIcon" class="menuBtnIcon" style="background-image: url(&quot;project://database/Assets/Content/Sprites%20&amp;%20Animations/settingsIcon.png?fileID=2800000&amp;guid=0e9eb4923ca62e849990123ee659520d&amp;type=3#settingsIcon&quot;); -unity-background-scale-mode: scale-to-fit; -unity-slice-left: 0; -unity-slice-top: 0; -unity-slice-right: 0; -unity-slice-bottom: 0; -unity-slice-type: sliced; opacity: 1;" />
             </ui:Button>
             <ui:Button name="QuitBtn" class="menuBtn">
                 <ui:Label text="Quit" />
                 <ui:VisualElement name="QuitBtnIcon" class="menuBtnIcon" />
             </ui:Button>
+        </ui:VisualElement>
+        <ui:VisualElement style="flex-grow: 1;">
+            <ui:VisualElement name="LanguageBtnHolder" style="flex-grow: 1; flex-direction: row;">
+                <ui:Button selectable="false" focusable="false" parse-escape-sequences="false" name="DanishLanguageBtn" class="languageBtn" style="background-image: url(&quot;project://database/Assets/Content/Sprites%20&amp;%20Animations/DanishFlagIcon.png?fileID=2800000&amp;guid=d57e6602d2fc8d1449cd1dbdc9187fae&amp;type=3#DanishFlagIcon&quot;);" />
+                <ui:Button name="EnglishLanguageBtn" class="languageBtn" style="background-image: url(&quot;project://database/Assets/Content/Sprites%20&amp;%20Animations/UKFlagIcon.png?fileID=2800000&amp;guid=a0f0a47028b7e6b4bb1b92206af3a943&amp;type=3#UKFlagIcon&quot;);" />
+            </ui:VisualElement>
+            <ui:VisualElement style="flex-grow: 1;">
+                <ui:Button name="MuteBtn" style="background-image: url(&quot;project://database/Assets/Content/Sprites%20&amp;%20Animations/mutedIcon.png?fileID=2800000&amp;guid=1f3072ff6c3146244be69c2398633bac&amp;type=3#mutedIcon&quot;); height: 30%; width: 20%; background-color: rgba(188, 188, 188, 0); border-top-width: 0; border-right-width: 0; border-bottom-width: 0; border-left-width: 0;" />
+            </ui:VisualElement>
         </ui:VisualElement>
     </ui:VisualElement>
 </ui:UXML>

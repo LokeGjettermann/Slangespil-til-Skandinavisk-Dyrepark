@@ -2,7 +2,7 @@ using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class sceneManaging : MonoBehaviour
+public class sceneManagingDuringRuntime : MonoBehaviour
 {
     #region Fields
     //make sure these are the same as the scene names, at least in the editor
@@ -27,8 +27,10 @@ public class sceneManaging : MonoBehaviour
     private bool activateSortingGame = false;
     #endregion
     #region Methods
-    private IEnumerator Start()
+
+    public IEnumerator LoadScenes()
     {
+        Debug.Log("Loading scenes");
         //load all the scenes you want
         if (SceneManager.GetSceneByName(mainSceneName) == null || !SceneManager.GetSceneByName(mainSceneName).isLoaded)
         {
