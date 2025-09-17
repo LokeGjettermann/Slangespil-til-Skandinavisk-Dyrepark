@@ -10,7 +10,9 @@ public class AudioManaging : MonoBehaviour
 {
     #region Fields
     [Header("Volume")]
-    [Header("(Will not change the volume if changed during the game)")]
+    [SerializeField]
+    [OnChangedCall("MuteSound")]
+    private bool mute = false;
     [SerializeField]
     [OnChangedCall("OnVolumeChange")]
     [Range(0.0f, 1.0f)]
@@ -46,6 +48,15 @@ public class AudioManaging : MonoBehaviour
     private Camera mainCamera;
     #endregion
     #region Properties
+    public bool Mute
+    {
+        get { return mute; }
+        set 
+        { 
+            mute = value;
+            MuteSound();
+        }
+    }
     public float GlobalVolume
     {
         get
@@ -143,6 +154,16 @@ public class AudioManaging : MonoBehaviour
                 break;
         }
     }
+
+    public void MuteSound()
+    {
+        if(mute) mainCamera.GetComponent<AudioListener>().enabled = false;
+        else mainCamera.GetComponent<AudioListener>().enabled = true;
+    }
+
+    /// <summary>
+    /// For script's own use only, do not use
+    /// </summary>
     public void OnVolumeChange()
     {
         AudioListener.volume = globalVolume;
@@ -158,6 +179,9 @@ public class AudioManaging : MonoBehaviour
             }
         }
     }
+    /// <summary>
+    /// For script's own use only, do not use
+    /// </summary>
     public void OnMusicVolumeChange()
     {
         mainCamera.GetComponent<AudioSource>().volume = musicVolume;
