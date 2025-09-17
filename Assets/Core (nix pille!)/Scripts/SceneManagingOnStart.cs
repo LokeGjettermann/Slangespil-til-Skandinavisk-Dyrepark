@@ -25,6 +25,12 @@ public class sceneManaging : MonoBehaviour
     private string sortingGameSceneName = "Sorting minigame";
     [SerializeField]
     private bool activateSortingGame = false;
+    [Header("Menu")]
+    [SerializeField]
+    private string inputTestSceneName = "input test";
+    [SerializeField]
+    private bool activateInputTest = false;
+
     #endregion
     #region Methods
     private IEnumerator Start()
@@ -39,10 +45,15 @@ public class sceneManaging : MonoBehaviour
         {
             SceneManager.LoadScene(uiSceneName, LoadSceneMode.Additive);
         }
-        if(activateSortingGame)
+        if (activateSortingGame)
         {
             SceneManager.LoadScene(sortingGameSceneName, LoadSceneMode.Additive);
         }
+        if (activateInputTest)
+        {
+            SceneManager.LoadScene(inputTestSceneName, LoadSceneMode.Additive);
+        }
+
         
         //unload this scene, as it is not needed anymore
         yield return SceneManager.UnloadSceneAsync(gameObject.scene);

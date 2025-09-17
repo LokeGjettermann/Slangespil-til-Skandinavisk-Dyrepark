@@ -28,7 +28,8 @@ public class Scoring : MonoBehaviour
         Debug.Log($"You answered {snakeType}, the correct answer was {this.snakeType}.");
         if (snakeType == this.snakeType)
         {
-            score.PlayerScore++;
+            Debug.Log("you got it right.");
+            score.AddToScore();
         }
     }
 }
