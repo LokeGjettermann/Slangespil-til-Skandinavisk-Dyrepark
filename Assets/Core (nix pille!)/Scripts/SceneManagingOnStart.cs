@@ -1,4 +1,5 @@
 using System.Collections;
+using UnityEditor.SearchService;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -10,7 +11,7 @@ public class sceneManaging : MonoBehaviour
     [SerializeField]
     [Tooltip("No switch for this one, Main Scene is what holds everything else, so should always be activated.")]
     private string mainSceneName = "Main Game";
-    [Header ("Menu")]
+    [Header("Menu")]
     [SerializeField]
     private string mainMenuSceneName = "Main menu";
     [SerializeField]
@@ -25,21 +26,24 @@ public class sceneManaging : MonoBehaviour
     private string sortingGameSceneName = "Sorting minigame";
     [SerializeField]
     private bool activateSortingGame = false;
-    [Header("Menu")]
-    [SerializeField]
-    private string inputTestSceneName = "input test";
-    [SerializeField]
-    private bool activateInputTest = false;
-
     #endregion
     #region Methods
     private IEnumerator Start()
     {
         //load all the scenes you want
-        SceneManager.LoadScene(mainSceneName, LoadSceneMode.Additive);
-        if (activateMainMenu) 
+        if (SceneManager.GetSceneByName(mainSceneName) == null || !SceneManager.GetSceneByName(mainSceneName).isLoaded)
+        {
+            SceneManager.LoadScene(mainSceneName, LoadSceneMode.Additive);
+            while (!SceneManager.GetSceneByName(mainSceneName).isLoaded)
+            {
+                yield return new WaitForSeconds(0.1f);
+            }
+            SceneManager.SetActiveScene(SceneManager.GetSceneByName(mainSceneName));
+        }
+        if (activateMainMenu)
         {
             SceneManager.LoadScene(mainMenuSceneName, LoadSceneMode.Additive);
+            
         }
         if (activateUI)
         {
@@ -49,12 +53,7 @@ public class sceneManaging : MonoBehaviour
         {
             SceneManager.LoadScene(sortingGameSceneName, LoadSceneMode.Additive);
         }
-        if (activateInputTest)
-        {
-            SceneManager.LoadScene(inputTestSceneName, LoadSceneMode.Additive);
-        }
 
-        
         //unload this scene, as it is not needed anymore
         yield return SceneManager.UnloadSceneAsync(gameObject.scene);
     }
