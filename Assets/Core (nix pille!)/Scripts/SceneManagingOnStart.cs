@@ -1,4 +1,5 @@
 using System.Collections;
+using UnityEditor.SearchService;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -33,6 +34,11 @@ public class sceneManaging : MonoBehaviour
         if (SceneManager.GetSceneByName(mainSceneName) == null || !SceneManager.GetSceneByName(mainSceneName).isLoaded)
         {
             SceneManager.LoadScene(mainSceneName, LoadSceneMode.Additive);
+            while (!SceneManager.GetSceneByName(mainSceneName).isLoaded)
+            {
+                yield return new WaitForSeconds(0.1f);
+            }
+            SceneManager.SetActiveScene(SceneManager.GetSceneByName(mainSceneName));
         }
         if (activateMainMenu)
         {
