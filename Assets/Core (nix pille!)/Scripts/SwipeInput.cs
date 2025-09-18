@@ -71,7 +71,6 @@ public class UserInput : MonoBehaviour
             newCursorPos += Touchscreen.current.position.ReadValue();
         }
         catch { }
-
         Vector2 cursorDelta = newCursorPos - lastCursorPos;
 
         if (cursorDelta.x != 0)
