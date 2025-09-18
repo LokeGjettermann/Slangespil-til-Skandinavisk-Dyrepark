@@ -4,12 +4,29 @@ using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class UserInput : MonoBehaviour
+public class SwipeInput : MonoBehaviour
 {
     private UserInputAction input;
     private Scoring scoring;
     private Vector2 lastCursorPos = Vector2.zero;
     private bool isPressed = false;
+    private bool isActive = false;
+    public bool IsActive 
+    {
+        get => isActive;
+        set
+        {
+            isActive = value;
+            if (isActive)
+            {
+                OnEnable();
+            }
+            else
+            {
+                OnDisable();
+            }
+        }
+    }
     [Header("Position")]
     [SerializeField][Tooltip("The objects resting-point.")] private float screenCenter = 0;
     [Space]
@@ -110,6 +127,7 @@ public class UserInput : MonoBehaviour
         if (Mathf.Abs(distance) > destructionDistance)
         {
             Answer(distance < 0);
+            GameBehavior_SO.ActivateNextCard();
             Destroy(gameObject);
         }
 

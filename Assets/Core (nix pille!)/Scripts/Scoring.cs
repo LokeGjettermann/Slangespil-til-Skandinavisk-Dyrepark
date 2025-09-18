@@ -8,13 +8,12 @@ public enum SnakeType
 
 public class Scoring : MonoBehaviour
 {
-    private Score score;
     [SerializeField] private SnakeType snakeType = SnakeType.Snog;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        score = ScriptableObject.CreateInstance<Score>();
+
     }
 
     // Update is called once per frame
@@ -29,7 +28,7 @@ public class Scoring : MonoBehaviour
         if (snakeType == this.snakeType)
         {
             Debug.Log("you got it right.");
-            score.AddToScore();
+            GameBehavior_SO.AddToScore();
         }
     }
 }
