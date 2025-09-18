@@ -6,10 +6,6 @@
                 <ui:Label text="Start" />
                 <ui:VisualElement name="StartBtnIcon" class="menuBtnIcon" style="background-image: url(&quot;project://database/Assets/Content/Sprites%20&amp;%20Animations/playIcon.png?fileID=2800000&amp;guid=c143fa338523f514e932978219c2b8d1&amp;type=3#playIcon&quot;); -unity-background-scale-mode: scale-to-fit; -unity-slice-left: 0; -unity-slice-top: 0; -unity-slice-right: 0; -unity-slice-bottom: 0; -unity-slice-type: sliced; opacity: 1;" />
             </ui:Button>
-            <ui:Button name="SettingsBtn" class="menuBtn">
-                <ui:Label text="Settings" />
-                <ui:VisualElement name="SettingsBtnIcon" class="menuBtnIcon" style="background-image: url(&quot;project://database/Assets/Content/Sprites%20&amp;%20Animations/settingsIcon.png?fileID=2800000&amp;guid=0e9eb4923ca62e849990123ee659520d&amp;type=3#settingsIcon&quot;); -unity-background-scale-mode: scale-to-fit; -unity-slice-left: 0; -unity-slice-top: 0; -unity-slice-right: 0; -unity-slice-bottom: 0; -unity-slice-type: sliced; opacity: 1;" />
-            </ui:Button>
             <ui:Button name="QuitBtn" class="menuBtn">
                 <ui:Label text="Quit" />
                 <ui:VisualElement name="QuitBtnIcon" class="menuBtnIcon" />

@@ -366,7 +366,7 @@ GameObject:
   - component: {fileID: 740671127}
   m_Layer: 0
   m_Name: SoundManager
-  m_TagString: Untagged
+  m_TagString: SoundManager
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -383,7 +383,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 42dfdfceb5d7c9d478a9f53c6fd2c723, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::AudioManaging
-  mute: 0
+  muted: 0
   globalVolume: 0
   SFXVolume: 0
   musicVolume: 0

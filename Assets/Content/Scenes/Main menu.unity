@@ -137,7 +137,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!81 &678774346
 AudioListener:
   m_ObjectHideFlags: 0
@@ -325,6 +325,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3e681d63dbb9d6541a50ce6d6c49d5f5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MainMenuBehavior
+  muteBtnSprite: {fileID: -7123772586224368634, guid: 1f3072ff6c3146244be69c2398633bac, type: 3}
+  unmuteBtnSprite: {fileID: -384883292703376819, guid: a7ce72800b6979146bf0b1258f634f2a, type: 3}
 --- !u!114 &1441693272
 MonoBehaviour:
   m_ObjectHideFlags: 0
