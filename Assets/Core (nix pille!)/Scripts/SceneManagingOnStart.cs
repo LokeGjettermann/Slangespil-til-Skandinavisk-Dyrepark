@@ -43,6 +43,7 @@ public class sceneManaging : MonoBehaviour
         if (activateMainMenu)
         {
             SceneManager.LoadScene(mainMenuSceneName, LoadSceneMode.Additive);
+            
         }
         if (activateUI)
         {
