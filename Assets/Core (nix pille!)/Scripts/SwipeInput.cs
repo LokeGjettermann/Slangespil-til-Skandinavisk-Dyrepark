@@ -27,7 +27,6 @@ public class SwipeInput : MonoBehaviour
             }
         }
     }
-    public GameObject PictureObject { get => pictureObject; set => pictureObject = value; }
 
     [Header("Position")]
     [SerializeField][Tooltip("The objects resting-point.")] private float screenCenter;
