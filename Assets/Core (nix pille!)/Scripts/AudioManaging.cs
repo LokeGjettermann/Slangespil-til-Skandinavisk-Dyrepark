@@ -12,7 +12,7 @@ public class AudioManaging : MonoBehaviour
     [Header("Volume")]
     [SerializeField]
     [OnChangedCall("MuteSound")]
-    private bool mute = false;
+    private bool muted = false;
     [SerializeField]
     [OnChangedCall("OnVolumeChange")]
     [Range(0.0f, 1.0f)]
@@ -48,12 +48,12 @@ public class AudioManaging : MonoBehaviour
     private Camera mainCamera;
     #endregion
     #region Properties
-    public bool Mute
+    public bool Muted
     {
-        get { return mute; }
-        set 
-        { 
-            mute = value;
+        get { return muted; }
+        set
+        {
+            muted = value;
             MuteSound();
         }
     }
@@ -157,7 +157,8 @@ public class AudioManaging : MonoBehaviour
 
     public void MuteSound()
     {
-        if(mute) mainCamera.GetComponent<AudioListener>().enabled = false;
+        muted = !muted;
+        if (muted) mainCamera.GetComponent<AudioListener>().enabled = false;
         else mainCamera.GetComponent<AudioListener>().enabled = true;
     }
 
