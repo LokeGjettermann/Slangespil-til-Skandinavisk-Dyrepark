@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Picture
   - Card
+  - SoundManager
   layers:
   - Default
   - TransparentFX
