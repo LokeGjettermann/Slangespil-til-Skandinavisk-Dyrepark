@@ -6,5 +6,12 @@ using UnityEngine;
 public class SetLanguage : ScriptableObject
 {
     public enum Language { Dansk, English}
-    public Language language;
+    [SerializeField]
+    private Language currentLanguage;
+    public Language language { get => currentLanguage; private set => currentLanguage = value; }
+
+    public void ChangeLanguage(Language language)
+    {
+        this.language = language;
+    }
 }

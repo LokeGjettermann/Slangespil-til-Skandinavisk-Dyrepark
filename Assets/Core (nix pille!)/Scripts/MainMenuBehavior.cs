@@ -4,6 +4,7 @@ using UnityEngine.UIElements;
 
 public class MainMenuBehavior : MonoBehaviour
 {
+    #region Fields
     private UIDocument mainMenu;
     private Button startGameBtn;
     private Button muteGameBtn;
@@ -14,29 +15,44 @@ public class MainMenuBehavior : MonoBehaviour
     private Sprite unmuteBtnSprite;
     private Button englishLanguageBtn;
     private Button danishLanguageBtn;
+    private Button quitGameBtn;
     private StyleBackground muteImg;
     private StyleBackground unmuteImg;
+    [Header("Names of buttons")]
+    [SerializeField]
+    private string startGameButtonName = "StartGameBtn";
+    [SerializeField]
+    private string muteSoundButtonName = "MuteBtn";
+    [SerializeField]
+    private const string englishLanguageButtonName = "EnglishLanguageBtn";
+    [SerializeField]
+    private const string danishLanguageButtonName = "DanishLanguageBtn";
+    private string quitButtonName = "QuitBtn";
+    private SetLanguage languageManager;
+    #endregion
+    #region Methods
 
     private void Awake()
     {
         mainMenu = GetComponent<UIDocument>();
-        startGameBtn = mainMenu.rootVisualElement.Q("StartGameBtn") as Button;
+        startGameBtn = mainMenu.rootVisualElement.Q(startGameButtonName) as Button;
         startGameBtn.RegisterCallback<ClickEvent>(OnStartClicked);
-        muteGameBtn = mainMenu.rootVisualElement.Q("MuteBtn") as Button;
+        muteGameBtn = mainMenu.rootVisualElement.Q(muteSoundButtonName) as Button;
         muteGameBtn.RegisterCallback<ClickEvent>(OnMuteClicked);
         try
         {
             manager = GameObject.FindGameObjectWithTag("SoundManager").GetComponent<AudioManaging>();
         }
         catch { }
-        englishLanguageBtn = mainMenu.rootVisualElement.Q("EnglishLanguageBtn") as Button;
+        englishLanguageBtn = mainMenu.rootVisualElement.Q(englishLanguageButtonName) as Button;
         englishLanguageBtn.RegisterCallback<ClickEvent, VisualElement>(OnLanguageChange, englishLanguageBtn);
-        danishLanguageBtn = mainMenu.rootVisualElement.Q("DanishLanguageBtn") as Button;
+        danishLanguageBtn = mainMenu.rootVisualElement.Q(danishLanguageButtonName) as Button;
         danishLanguageBtn.RegisterCallback<ClickEvent, VisualElement>(OnLanguageChange, danishLanguageBtn);
+        quitGameBtn = mainMenu.rootVisualElement.Q(quitButtonName) as Button;
+        quitGameBtn.RegisterCallback<ClickEvent>(OnQuitGameClicked);
 
         muteImg = new StyleBackground(muteBtnSprite);
         unmuteImg = new StyleBackground(unmuteBtnSprite);
-        mainMenu.rootVisualElement.Q("ImageSetup").style.display = DisplayStyle.None;
     }
     private void OnStartClicked(ClickEvent evt)
     {
@@ -66,6 +82,24 @@ public class MainMenuBehavior : MonoBehaviour
     }
     private void OnLanguageChange(ClickEvent evt, VisualElement element)
     {
-        Debug.Log("Button called: " + element);
+        switch (element.name)
+        {
+            case englishLanguageButtonName:
+                Debug.Log("Language changed to English");
+                languageManager.ChangeLanguage(SetLanguage.Language.English);
+                break;
+            case danishLanguageButtonName:
+                Debug.Log("Language changed to Danish");
+                languageManager.ChangeLanguage(SetLanguage.Language.Dansk);
+                break;
+            default:
+                Debug.Log("ERROR: Could not find language from \"" + element.name + "\"");
+                break;
+        }
     }
+    private void OnQuitGameClicked(ClickEvent evt)
+    {
+        //not sure if we should just close the game here, don't want to shut down the entire app
+    }
+    #endregion
 }
