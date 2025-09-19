@@ -10,21 +10,25 @@ public class UserInput : MonoBehaviour
     private Scoring scoring;
     private Vector2 lastCursorPos = Vector2.zero;
     private bool isPressed = false;
+    [Header("Position")]
     [SerializeField][Tooltip("The objects resting-point.")] private float screenCenter = 0;
     [Space]
+    [Header("Rotation")]
     [SerializeField][Tooltip("Should the object rotate when moved.")] private bool doRotation = true;
     [SerializeField][Range(0, 20)][Tooltip("How much should the object rotate when moved.")] private float rotationMultiplier = 5f;
     [Space]
+    [Header("Speed")]
     [SerializeField][Range(0, 0.05f)][Tooltip("How much should the object move when dragged.")] private float dragMultiplier = 0.005f;
     [SerializeField][Range(0, 0.5f)][Tooltip("How fast should the object move when let go.")] private float movementMultiplier = 0.05f;
     [Space]
+    [Header("Distance")]
     [SerializeField][Range(1, 10)][Tooltip("The threshold for confirming an answer.")] private float answerDistance = 6f;
     [SerializeField][Range(10, 20)][Tooltip("The threshold for removing the card.")] private float destructionDistance = 12f;
 
 
     private void OnEnable()
     {
-        //Debug.Log(screenCenter + " | " + gameObject.transform.position.x);
+        // Enables the input, and activates the click/tap event
         scoring = gameObject.GetComponent<Scoring>();
         input = new UserInputAction();
         input.User.Enable();
@@ -44,8 +48,8 @@ public class UserInput : MonoBehaviour
         isPressed = !isPressed;
         if (isPressed)
         {
-            //Debug.Log("thing pressed");
-            lastCursorPos = Mouse.current.position.ReadValue();// + Touchscreen.current.position.ReadValue();
+            // activates the tracking of the cursor.
+            lastCursorPos = Mouse.current.position.ReadValue();
             try
             {
                 lastCursorPos += Touchscreen.current.position.ReadValue();
@@ -55,13 +59,13 @@ public class UserInput : MonoBehaviour
         }
         else
         {
-            //Debug.Log($"thing unpressed at: {gameObject.transform.position.x}");
+            // deactivates the tracking of the cursor.
             input.User.Drag.performed -= OnDrag;
         }
     }
     private void OnDrag(InputAction.CallbackContext context)
     {
-        Vector2 newCursorPos = Mouse.current.position.ReadValue(); //+ Touchscreen.current.position.ReadValue();
+        Vector2 newCursorPos = Mouse.current.position.ReadValue();
         try
         {
             newCursorPos += Touchscreen.current.position.ReadValue();
@@ -72,7 +76,6 @@ public class UserInput : MonoBehaviour
         if (cursorDelta.x != 0)
         {
             gameObject.transform.position += new Vector3(cursorDelta.x * dragMultiplier, 0, 0);
-            //Debug.Log($"dragged the thing by: {cursorDelta.x}");
         }
         lastCursorPos += cursorDelta;
     }
