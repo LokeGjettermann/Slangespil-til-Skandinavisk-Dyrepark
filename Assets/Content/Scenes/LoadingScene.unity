@@ -135,7 +135,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &34725983
 Transform:
   m_ObjectHideFlags: 0
@@ -165,11 +165,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::sceneManaging
   mainSceneName: Main Game
   mainMenuSceneName: Main menu
-  activateMainMenu: 0
+  activateMainMenu: 1
   uiSceneName: UI
-  activateUI: 1
+  activateUI: 0
   sortingGameSceneName: Sorting minigame
-  activateSortingGame: 1
+  activateSortingGame: 0
 --- !u!1 &1056869606
 GameObject:
   m_ObjectHideFlags: 0
@@ -370,3 +370,4 @@ SceneRoots:
   m_Roots:
   - {fileID: 1056869609}
   - {fileID: 4551691323556424023}
+  - {fileID: 34725983}
