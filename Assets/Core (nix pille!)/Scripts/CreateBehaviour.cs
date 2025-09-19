@@ -23,7 +23,6 @@ public class CreateBehaviour : MonoBehaviour
         for (int i = 0; i < cardList.pictureObjects.Count; i++)
         {
             cardList.pictureObjects[i].GetComponent<SpriteRenderer>().sprite = cardList.sprites[i];
-            cardList.pictureObjects[i].GetComponentInParent<SwipeInput>().PictureObject = cardList.pictureObjects[i];
         }
 
         GameBehavior_SO.ConstructList();

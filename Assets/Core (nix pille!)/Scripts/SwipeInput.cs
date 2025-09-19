@@ -8,7 +8,6 @@ public class SwipeInput : MonoBehaviour
 {
     private UserInputAction input;
     private Scoring scoring;
-    private GameObject pictureObject;
     private Vector2 lastCursorPos = Vector2.zero;
     private bool isPressed = false;
     private bool isActive = false;
