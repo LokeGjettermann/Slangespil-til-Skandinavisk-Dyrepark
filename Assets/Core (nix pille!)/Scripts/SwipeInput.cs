@@ -27,20 +27,21 @@ public class SwipeInput : MonoBehaviour
             }
         }
     }
+
     [Header("Position")]
-    [SerializeField][Tooltip("The objects resting-point.")] private float screenCenter = 0;
+    [SerializeField][Tooltip("The objects resting-point.")] private float screenCenter;
     [Space]
     [Header("Rotation")]
-    [SerializeField][Tooltip("Should the object rotate when moved.")] private bool doRotation = true;
-    [SerializeField][Range(0, 20)][Tooltip("How much should the object rotate when moved.")] private float rotationMultiplier = 5f;
+    [SerializeField][Tooltip("Should the object rotate when moved.")] private bool doRotation;
+    [SerializeField][Range(0, 20)][Tooltip("How much should the object rotate when moved.")] private float rotationMultiplier;
     [Space]
     [Header("Speed")]
-    [SerializeField][Range(0, 0.05f)][Tooltip("How much should the object move when dragged.")] private float dragMultiplier = 0.005f;
-    [SerializeField][Range(0, 0.5f)][Tooltip("How fast should the object move when let go.")] private float movementMultiplier = 0.05f;
+    [SerializeField][Range(0, 0.05f)][Tooltip("How much should the object move when dragged.")] private float dragMultiplier;
+    [SerializeField][Range(0, 0.5f)][Tooltip("How fast should the object move when let go.")] private float movementMultiplier;
     [Space]
     [Header("Distance")]
-    [SerializeField][Range(1, 10)][Tooltip("The threshold for confirming an answer.")] private float answerDistance = 6f;
-    [SerializeField][Range(10, 20)][Tooltip("The threshold for removing the card.")] private float destructionDistance = 12f;
+    [SerializeField][Range(1, 10)][Tooltip("The threshold for confirming an answer.")] private float answerDistance;
+    [SerializeField][Range(10, 20)][Tooltip("The threshold for removing the card.")] private float destructionDistance;
 
 
     private void OnEnable()

@@ -9,7 +9,7 @@ public class sceneManagingDuringRuntime : MonoBehaviour
     [Header("Main scene")]
     [SerializeField]
     [Tooltip("No switch for this one, Main Scene is what holds everything else, so should always be activated.")]
-    private string mainSceneName = "Main Game";
+    public string mainSceneName = "Main Game";
     [Header("Menu")]
     [SerializeField]
     private string mainMenuSceneName = "Main menu";
@@ -53,7 +53,6 @@ public class sceneManagingDuringRuntime : MonoBehaviour
         {
             SceneManager.LoadScene(sortingGameSceneName, LoadSceneMode.Additive);
         }
-
         //unload this scene, as it is not needed anymore
         yield return SceneManager.UnloadSceneAsync(gameObject.scene);
     }

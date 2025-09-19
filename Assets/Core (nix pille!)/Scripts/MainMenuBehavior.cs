@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UIElements;
@@ -27,8 +28,10 @@ public class MainMenuBehavior : MonoBehaviour
     private const string englishLanguageButtonName = "EnglishLanguageBtn";
     [SerializeField]
     private const string danishLanguageButtonName = "DanishLanguageBtn";
+    [SerializeField]
     private string quitButtonName = "QuitBtn";
     private SetLanguage languageManager;
+    private Scene mainScene;
     #endregion
     #region Methods
 
@@ -53,6 +56,14 @@ public class MainMenuBehavior : MonoBehaviour
 
         muteImg = new StyleBackground(muteBtnSprite);
         unmuteImg = new StyleBackground(unmuteBtnSprite);
+        languageManager = ScriptableObject.CreateInstance<SetLanguage>();
+
+        try
+        {
+            mainScene = SceneManager.GetSceneByName(GetComponent<sceneManagingDuringRuntime>().mainSceneName);
+            DontDestroyOnLoad(languageManager);
+        }
+        catch { }
     }
     private void OnStartClicked(ClickEvent evt)
     {
@@ -62,7 +73,7 @@ public class MainMenuBehavior : MonoBehaviour
     private void OnMuteClicked(ClickEvent evt)
     {
         //if the scene is run on its own, there will be no soundmanager to find
-        if (manager != null)
+        if (manager != null && mainScene != null)
         {
             //mute or unmute sound
             manager.MuteSound();
