@@ -8,7 +8,7 @@ public enum SnakeType
 
 public class Scoring : MonoBehaviour
 {
-    [SerializeField] private SnakeType snakeType = SnakeType.Snog;
+    [SerializeField] private SnakeType snakeType;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()

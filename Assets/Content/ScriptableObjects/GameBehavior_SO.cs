@@ -24,8 +24,9 @@ public class GameBehavior_SO : ScriptableObject
         foreach (GameObject card in cards)
         {
             card.GetComponent<SpriteRenderer>().sortingOrder = sortingLayer;
+            card.GetComponentInChildren<SpriteRenderer>().sortingOrder = sortingLayer + 1;//GetComponent<SwipeInput>().PictureObject.g
             card.GetComponent<SwipeInput>().IsActive = false;
-            sortingLayer--;
+            sortingLayer -= 2;
         }
     }
 
