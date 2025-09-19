@@ -22,10 +22,10 @@ public class CreateBehaviour : MonoBehaviour
         for (int i = 0; i < cardList.pictureObjects.Count; i++)
         {
             cardList.pictureObjects[i].GetComponent<SpriteRenderer>().sprite = cardList.sprites[i];
-
         }
 
-
+        GameBehavior_SO.ConstructList();
+        GameBehavior_SO.ActivateNextCard();
     }
 
    

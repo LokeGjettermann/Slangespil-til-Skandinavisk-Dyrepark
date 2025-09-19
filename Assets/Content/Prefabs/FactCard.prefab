@@ -60,6 +60,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: FactCard
       objectReference: {fileID: 0}
+    - target: {fileID: 5022357548228885041, guid: 46d8b45079b9b9c4ab66f16e7cd48ec8, type: 3}
+      propertyPath: m_TagString
+      value: Card
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
