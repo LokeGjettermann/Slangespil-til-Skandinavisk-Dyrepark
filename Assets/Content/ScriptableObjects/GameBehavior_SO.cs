@@ -31,10 +31,13 @@ public class GameBehavior_SO : ScriptableObject
         int sortingLayer = 0;
         foreach (GameObject card in cards)
         {
+            Debug.Log(card.transform.GetChild(0).GetComponent<SpriteRenderer>().sprite.name);
+            //Debug.Log(card.<SpriteRenderer>().sprite.name);
+            
             card.GetComponent<SpriteRenderer>().sortingOrder = sortingLayer;
-            card.GetComponentInChildren<SpriteRenderer>().sortingOrder = sortingLayer + 1;
+            card.transform.GetChild(0).GetComponent<SpriteRenderer>().sortingOrder = sortingLayer + 1;
             card.GetComponent<SwipeInput>().IsActive = false;
-            sortingLayer -= 2;
+            sortingLayer += 2;
         }
     }
 
@@ -42,8 +45,8 @@ public class GameBehavior_SO : ScriptableObject
     {
         if (cards.Count != 0)
         {
-            cards.First().GetComponent<SwipeInput>().IsActive = true;
-            cards.Remove(cards.First());
+            cards.Last().GetComponent<SwipeInput>().IsActive = true;
+            cards.Remove(cards.Last());
         }
         else
         {
