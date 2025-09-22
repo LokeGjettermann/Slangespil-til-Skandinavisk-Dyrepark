@@ -45,7 +45,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::AudioManaging
   muted: 0
-  globalVolume: 0
+  globalVolume: 0.498
   SFXVolume: 0
   musicVolume: 0
   soundEffects: []

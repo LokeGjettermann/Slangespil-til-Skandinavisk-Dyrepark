@@ -9,11 +9,12 @@ public enum SnakeType
 public class Scoring : MonoBehaviour
 {
     [SerializeField] private SnakeType snakeType;
+    AudioSource m_ScoreAudioSource;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-
+        m_ScoreAudioSource = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
