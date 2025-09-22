@@ -71,6 +71,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::MainMenuBehavior
   muteBtnSprite: {fileID: -7123772586224368634, guid: 1f3072ff6c3146244be69c2398633bac, type: 3}
   unmuteBtnSprite: {fileID: -384883292703376819, guid: a7ce72800b6979146bf0b1258f634f2a, type: 3}
+  startGameButtonName: StartGameBtn
+  muteSoundButtonName: MuteBtn
+  quitButtonName: QuitBtn
 --- !u!114 &1746866843831521773
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -86,7 +89,13 @@ MonoBehaviour:
   mainSceneName: Main Game
   mainMenuSceneName: Main menu
   activateMainMenu: 0
+  deactivateMainMenu: 0
   uiSceneName: UI
   activateUI: 1
+  deactivateUI: 0
   sortingGameSceneName: Sorting minigame
   activateSortingGame: 1
+  deactivateSortingGame: 0
+  endScreenSceneName: EndScreen
+  activateEndScreen: 0
+  deactivateEndScreen: 0
