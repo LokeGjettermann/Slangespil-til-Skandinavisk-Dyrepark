@@ -96,3 +96,6 @@ MonoBehaviour:
   sortingGameSceneName: Sorting minigame
   activateSortingGame: 1
   deactivateSortingGame: 0
+  endScreenSceneName: EndScreen
+  activateEndScreen: 0
+  deactivateEndScreen: 0

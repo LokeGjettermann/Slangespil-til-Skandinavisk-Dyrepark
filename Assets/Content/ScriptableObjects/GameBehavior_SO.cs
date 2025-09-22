@@ -6,15 +6,23 @@ using UnityEngine.UIElements;
 [CreateAssetMenu(fileName = "Score", menuName = "Scriptable Objects/Score")]
 public class GameBehavior_SO : ScriptableObject
 {
-    [SerializeField][Tooltip("How much added to the score upon a correct answer.")] private static int addedScore = 1;
-    private static int playerScore = 0;
     private static List<GameObject> cards = new List<GameObject>();
+    private static int playerScore = 0;
+    [SerializeField][Tooltip("How much added to the score upon a correct answer.")] private static int addedScore = 1;
+    [SerializeField][Tooltip("doesn't work.")] private static int totalRounds = 2;
+
+    public static int PlayerScore { get => playerScore; }
 
     public static void AddToScore()
     {
         playerScore += addedScore;
         // Finds the game object, gets it's UIDocment, finds the score-label and then updates it.
-        GameObject.Find("GameHUD").GetComponent<UIDocument>().rootVisualElement.Q<Label>("Score_Lbl").text = $"Score: {playerScore}";
+        GameObject.Find("GameHUD").GetComponent<UIDocument>().rootVisualElement.Q<Label>("Score_Lbl").text = $"Score: {PlayerScore}";
+    }
+
+    public static void ResetScore()
+    {
+        playerScore = 0;
     }
 
     public static void ConstructList()
@@ -37,5 +45,15 @@ public class GameBehavior_SO : ScriptableObject
             cards.First().GetComponent<SwipeInput>().IsActive = true;
             cards.Remove(cards.First());
         }
+        else
+        {
+            ToEndScreen();
+        }
+    }
+
+    private static void ToEndScreen()
+    {
+        sceneManagingDuringRuntime sceneChanger = GameObject.FindGameObjectWithTag("MenuItem").GetComponent<sceneManagingDuringRuntime>();
+        sceneChanger.StartCoroutine(sceneChanger.LoadScenes());
     }
 }

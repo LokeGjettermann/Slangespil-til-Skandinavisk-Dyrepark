@@ -99,5 +99,9 @@ public class sceneManagingDuringRuntime : MonoBehaviour
         //unload this scene, as it is not needed anymore
         yield return SceneManager.UnloadSceneAsync(gameObject.scene);
     }
+
+
+
+
     #endregion
 }
