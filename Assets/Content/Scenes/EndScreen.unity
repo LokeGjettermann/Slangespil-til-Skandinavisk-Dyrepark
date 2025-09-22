@@ -325,6 +325,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 622cf66d9c1d3a0489b20a4294f1175c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EndScreenBehavior
+  scoreTextDK: 'Din Score Er:'
+  scoreTextEN: 'You are SCore is:'
 --- !u!114 &2134027960
 MonoBehaviour:
   m_ObjectHideFlags: 0
