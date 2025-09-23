@@ -111,7 +111,7 @@ MonoBehaviour:
   screenCenter: 0
   doRotation: 1
   rotationMultiplier: 5
-  dragMultiplier: 0.025
+  dragMultiplier: 0.005
   movementMultiplier: 0.05
   answerDistance: 6
   destructionDistance: 12

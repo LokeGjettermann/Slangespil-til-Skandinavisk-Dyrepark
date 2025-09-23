@@ -6,6 +6,8 @@ public class EndScreenBehavior : MonoBehaviour
     private UIDocument endScreen;
     private Button nextButton;
     private Label scoreLabel;
+    [SerializeField][Tooltip("What does it say before the score is mentioned. (Dansk)")] private string scoreTextDK;
+    [SerializeField][Tooltip("What does it say before the score is mentioned. (English)")] private string scoreTextEN;
 
     void Awake()
     {
@@ -13,7 +15,7 @@ public class EndScreenBehavior : MonoBehaviour
         nextButton = endScreen.rootVisualElement.Q("ToMainMenu_Btn") as Button;
         scoreLabel = endScreen.rootVisualElement.Q("FinalScore_Lbl") as Label;
         nextButton.RegisterCallback<ClickEvent>(OnNextButtonPressed);
-        scoreLabel.text += $": {GameBehavior_SO.PlayerScore}";
+        scoreLabel.text = $"{scoreTextEN} {GameBehavior_SO.PlayerScore}";
     }
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -31,7 +33,7 @@ public class EndScreenBehavior : MonoBehaviour
 
     private void OnNextButtonPressed(ClickEvent evnt)
     {
-        Debug.Log("Clicked Next");
+        Debug.Log("Clicked To Main Menu");
         Restart();
     }
 
