@@ -254,6 +254,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: SoundManager
       objectReference: {fileID: 0}
+    - target: {fileID: 4304491940617850524, guid: 730c9dbf4ea8e774e8cfe017e0400b62, type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7774210824171819562, guid: 730c9dbf4ea8e774e8cfe017e0400b62, type: 3}
+      propertyPath: SFXVolume
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7774210824171819562, guid: 730c9dbf4ea8e774e8cfe017e0400b62, type: 3}
       propertyPath: SFXVolume
       value: 1
