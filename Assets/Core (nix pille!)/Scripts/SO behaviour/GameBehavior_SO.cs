@@ -11,7 +11,6 @@ public class GameBehavior_SO : ScriptableObject
     private static List<GameObject> cards = new List<GameObject>();
     private static int playerScore = 0;
     [SerializeField][Tooltip("How much added to the score upon a correct answer.")] private static int addedScore = 1;
-    //[SerializeField][Tooltip("doesn't work.")] private static int totalRounds = 2;
 
     public static int PlayerScore { get => playerScore; }
 

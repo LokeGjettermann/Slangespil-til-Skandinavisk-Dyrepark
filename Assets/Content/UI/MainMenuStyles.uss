@@ -9,11 +9,13 @@
     align-content: center;
     -unity-background-scale-mode: scale-to-fit;
     width: 70%;
+    height: 20%;
+    font-size: 100%;
 }
 
 .menuBtnIcon {
     align-content: auto;
-    align-items: auto;
+    align-items: flex-end;
     align-self: auto;
     width: auto;
     -unity-background-scale-mode: scale-to-fit;
@@ -21,6 +23,8 @@
     flex-grow: 1;
     flex-shrink: 1;
     background-size: contain;
+    -unity-text-align: upper-right;
+    margin-left: 40%;
 }
 
 .languageBtn {
