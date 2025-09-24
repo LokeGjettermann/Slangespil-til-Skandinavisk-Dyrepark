@@ -10,6 +10,8 @@ public class Scoring : MonoBehaviour
 {
     [SerializeField] private SnakeType snakeType;
 
+    public SnakeType GivenSnakeType { get => snakeType; set => snakeType = value; }
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -19,7 +21,7 @@ public class Scoring : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
     public void Answer(SnakeType snakeType)

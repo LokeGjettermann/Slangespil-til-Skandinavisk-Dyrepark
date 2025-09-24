@@ -1,6 +1,8 @@
 using System.Collections.Generic;
 using System.Linq;
+using TMPro;
 using UnityEngine;
+using UnityEngine.Rendering;
 using UnityEngine.UIElements;
 
 [CreateAssetMenu(fileName = "Score", menuName = "Scriptable Objects/Score")]
@@ -14,7 +16,14 @@ public class GameBehavior_SO : ScriptableObject
     {
         playerScore += addedScore;
         // Finds the game object, gets it's UIDocment, finds the score-label and then updates it.
-        GameObject.Find("GameHUD").GetComponent<UIDocument>().rootVisualElement.Q<Label>("Score_Lbl").text = $"Score: {playerScore}";
+        try
+        {
+            GameObject.Find("GameHUD").GetComponent<UIDocument>().rootVisualElement.Q<Label>("Score_Lbl").text = $"Score: {playerScore}";
+        }
+        catch
+        {
+
+        }
     }
 
     public static void ConstructList()
@@ -24,7 +33,8 @@ public class GameBehavior_SO : ScriptableObject
         foreach (GameObject card in cards)
         {
             card.GetComponent<SpriteRenderer>().sortingOrder = sortingLayer;
-            card.GetComponentInChildren<SpriteRenderer>().sortingOrder = sortingLayer + 1;
+            if (card.GetComponentInChildren<SpriteRenderer>() != null) card.GetComponentInChildren<SpriteRenderer>().sortingOrder = sortingLayer + 1;
+            if (card.GetComponentInChildren<MeshRenderer>() != null) card.GetComponentInChildren<SortingGroup>().sortingOrder = sortingLayer + 1;
             card.GetComponent<SwipeInput>().IsActive = false;
             sortingLayer -= 2;
         }
