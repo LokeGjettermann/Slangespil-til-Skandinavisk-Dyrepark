@@ -69,6 +69,7 @@ public class GameBehavior_SO : ScriptableObject
 
     private static void ToEndScreen()
     {
+        GameObject.Find("WinSound").GetComponent<SoundEffectPlayer>().PlaySoundEffect();
         sceneManagingDuringRuntime sceneChanger = GameObject.FindGameObjectWithTag("MenuItem").GetComponent<sceneManagingDuringRuntime>();
         sceneChanger.StartCoroutine(sceneChanger.LoadScenes());
     }

@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5924328250876687956}
   - component: {fileID: 510023237855556214}
+  - component: {fileID: 79243912599652673}
   m_Layer: 0
   m_Name: WinSound
   m_TagString: Untagged
@@ -129,6 +130,18 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &79243912599652673
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1268045252159128839}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: da5197bf26b87cd419ae45052e491492, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SoundEffectPlayer
 --- !u!1 &2463361518210990353
 GameObject:
   m_ObjectHideFlags: 0
@@ -623,6 +636,7 @@ GameObject:
   m_Component:
   - component: {fileID: 505076395881922072}
   - component: {fileID: 1967466518725495080}
+  - component: {fileID: 9059062868423656664}
   m_Layer: 0
   m_Name: LoseSound
   m_TagString: Untagged
@@ -742,3 +756,15 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &9059062868423656664
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6747459326484323309}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: da5197bf26b87cd419ae45052e491492, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SoundEffectPlayer

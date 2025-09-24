@@ -96,7 +96,8 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Picture
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: -8852220291698842266, guid: 46d8b45079b9b9c4ab66f16e7cd48ec8, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []

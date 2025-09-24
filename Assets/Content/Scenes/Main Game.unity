@@ -263,10 +263,6 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7774210824171819562, guid: 730c9dbf4ea8e774e8cfe017e0400b62, type: 3}
-      propertyPath: SFXVolume
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7774210824171819562, guid: 730c9dbf4ea8e774e8cfe017e0400b62, type: 3}
       propertyPath: mainCamera
       value: 
       objectReference: {fileID: 474034242}

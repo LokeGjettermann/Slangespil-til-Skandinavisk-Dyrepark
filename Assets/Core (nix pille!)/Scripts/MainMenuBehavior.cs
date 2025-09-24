@@ -113,7 +113,7 @@ public class MainMenuBehavior : MonoBehaviour
     }
     private void OnQuitGameClicked(ClickEvent evt)
     {
-        //not sure if we should just close the game here, don't want to shut down the entire app
+        Application.Quit();
     }
     #endregion
 }
