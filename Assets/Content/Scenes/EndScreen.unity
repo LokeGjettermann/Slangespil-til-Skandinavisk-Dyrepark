@@ -325,8 +325,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 622cf66d9c1d3a0489b20a4294f1175c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EndScreenBehavior
-  scoreTextDK: 'Din Score Er:'
-  scoreTextEN: 'You are SCore is:'
+  endTextName: EndScreenTitle_Lbl
+  scoreTextName: FinalScore_Lbl
+  buttonName: ToMainMenu_Btn
+  endTextDK: "S\xE5dan! Hvor godt kan du kende forkel p\xE5 slangerne?"
+  endTextEN: Finished! How well can you tell the difference?
+  scoreTextDK: 'Din Score er:'
+  scoreTextEN: 'Your Score is:'
+  buttonTextDK: Tilbage til menu
+  buttonTextEN: Back to menu
 --- !u!114 &2134027960
 MonoBehaviour:
   m_ObjectHideFlags: 0
