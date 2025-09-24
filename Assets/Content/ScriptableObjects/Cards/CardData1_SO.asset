@@ -10,6 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d2f28e737742c4448ba511fcfeefaf4d, type: 3}
-  m_Name: FactCard_SO
-  m_EditorClassIdentifier: Assembly-CSharp::CardData_SO
+  m_Name: CardData1_SO
+  m_EditorClassIdentifier: Assembly-CSharp::CardData
+  isPictureCard: 0
   sprite: {fileID: 0}
+  cardTextDanish: Her er lidt placeholder tekst
+  cardTextEnglish: Here is some placeholder text
+  snakeType: 1

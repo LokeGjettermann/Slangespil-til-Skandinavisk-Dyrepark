@@ -14,6 +14,8 @@ GameObject:
   - component: {fileID: -3771072760338523727}
   - component: {fileID: -8852220291698842266}
   - component: {fileID: 5254647076778039440}
+  - component: {fileID: -2594329096730677808}
+  - component: {fileID: -7059911032312374370}
   m_Layer: 0
   m_Name: CardBase
   m_TagString: Card
@@ -273,6 +275,38 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CardBehaviour
   cardData: {fileID: 11400000, guid: 6fa6f1a872218234b979deadcd6be08a, type: 2}
+--- !u!114 &-2594329096730677808
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5022357548228885041}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1fb8a79b32df347438d1f5f91437d394, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SwipeInput
+  screenCenter: 0
+  doRotation: 1
+  rotationMultiplier: 5
+  dragMultiplier: 0.025
+  movementMultiplier: 0.05
+  answerDistance: 6
+  destructionDistance: 12
+--- !u!114 &-7059911032312374370
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5022357548228885041}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0a1bcc312ca8b6d4887e2402b32cec78, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Scoring
+  snakeType: 0
 --- !u!1 &5209068913063626993
 GameObject:
   m_ObjectHideFlags: 0
