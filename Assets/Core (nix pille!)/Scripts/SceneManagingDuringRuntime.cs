@@ -15,16 +15,30 @@ public class sceneManagingDuringRuntime : MonoBehaviour
     private string mainMenuSceneName = "Main menu";
     [SerializeField]
     private bool activateMainMenu = false;
+    [SerializeField]
+    private bool deactivateMainMenu = false;
     [Header("UI")]
     [SerializeField]
     private string uiSceneName = "UI";
     [SerializeField]
-    private bool activateUI = true;
+    private bool activateUI = false;
+    [SerializeField]
+    private bool deactivateUI = false;
     [Header("Sorting minigame")]
     [SerializeField]
     private string sortingGameSceneName = "Sorting minigame";
     [SerializeField]
     private bool activateSortingGame = false;
+    [SerializeField]
+    private bool deactivateSortingGame = false;
+    [Header("End Screen Menu")]
+    [SerializeField]
+    private string endScreenSceneName = "EndScreen";
+    [SerializeField]
+    private bool activateEndScreen = false;
+    [SerializeField]
+    private bool deactivateEndScreen = false;
+
     #endregion
     #region Methods
 
@@ -41,20 +55,53 @@ public class sceneManagingDuringRuntime : MonoBehaviour
             }
             SceneManager.SetActiveScene(SceneManager.GetSceneByName(mainSceneName));
         }
-        if (activateMainMenu)
+
+        // main menu
+        if (activateMainMenu && !SceneManager.GetSceneByName(mainMenuSceneName).isLoaded)
         {
             SceneManager.LoadScene(mainMenuSceneName, LoadSceneMode.Additive);
         }
-        if (activateUI)
+        if (deactivateMainMenu && SceneManager.GetSceneByName(mainMenuSceneName) != gameObject.scene && SceneManager.GetSceneByName(mainMenuSceneName).isLoaded)
+        {
+            SceneManager.UnloadSceneAsync(SceneManager.GetSceneByName(mainMenuSceneName));
+        }
+
+        // UI
+        if (activateUI && !SceneManager.GetSceneByName(uiSceneName).isLoaded)
         {
             SceneManager.LoadScene(uiSceneName, LoadSceneMode.Additive);
         }
-        if (activateSortingGame)
+        if (deactivateUI && SceneManager.GetSceneByName(uiSceneName) != gameObject.scene && SceneManager.GetSceneByName(uiSceneName).isLoaded)
+        {
+            SceneManager.UnloadSceneAsync(SceneManager.GetSceneByName(uiSceneName));
+        }
+
+        // sorting game
+        if (activateSortingGame && !SceneManager.GetSceneByName(sortingGameSceneName).isLoaded)
         {
             SceneManager.LoadScene(sortingGameSceneName, LoadSceneMode.Additive);
         }
+        if (deactivateSortingGame && SceneManager.GetSceneByName(sortingGameSceneName) != gameObject.scene && SceneManager.GetSceneByName(sortingGameSceneName).isLoaded)
+        {
+            SceneManager.UnloadSceneAsync(SceneManager.GetSceneByName(sortingGameSceneName));
+        }
+
+        // End screen
+        if (activateEndScreen && !SceneManager.GetSceneByName(endScreenSceneName).isLoaded)
+        {
+            SceneManager.LoadScene(endScreenSceneName, LoadSceneMode.Additive);
+        }
+        if (deactivateEndScreen && SceneManager.GetSceneByName(endScreenSceneName) != gameObject.scene && SceneManager.GetSceneByName(endScreenSceneName).isLoaded)
+        {
+            SceneManager.UnloadSceneAsync(SceneManager.GetSceneByName(endScreenSceneName));
+        }
+
         //unload this scene, as it is not needed anymore
         yield return SceneManager.UnloadSceneAsync(gameObject.scene);
     }
+
+
+
+
     #endregion
 }

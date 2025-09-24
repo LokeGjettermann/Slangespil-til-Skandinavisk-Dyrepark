@@ -8,6 +8,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -5075623978297437654, guid: 46d8b45079b9b9c4ab66f16e7cd48ec8, type: 3}
+      propertyPath: m_SortingLayer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -5075623978297437654, guid: 46d8b45079b9b9c4ab66f16e7cd48ec8, type: 3}
+      propertyPath: m_SortingLayerID
+      value: -2114518981
+      objectReference: {fileID: 0}
     - target: {fileID: -114338951551977502, guid: 46d8b45079b9b9c4ab66f16e7cd48ec8, type: 3}
       propertyPath: sprite1
       value: 
@@ -111,7 +119,7 @@ MonoBehaviour:
   screenCenter: 0
   doRotation: 1
   rotationMultiplier: 5
-  dragMultiplier: 0.025
+  dragMultiplier: 0.005
   movementMultiplier: 0.05
   answerDistance: 6
   destructionDistance: 12

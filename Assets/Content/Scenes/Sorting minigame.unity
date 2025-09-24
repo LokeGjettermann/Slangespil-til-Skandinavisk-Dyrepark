@@ -256,6 +256,63 @@ MonoBehaviour:
     m_VarianceClampScale: 0.9
     m_ContrastAdaptiveSharpening: 0
   m_Version: 2
+--- !u!1 &1264629441
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1264629443}
+  - component: {fileID: 1264629442}
+  m_Layer: 0
+  m_Name: ToEndScreen
+  m_TagString: MenuItem
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1264629442
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1264629441}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9d0a758ad3daa774b9acd73791e7bc6d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::sceneManagingDuringRuntime
+  mainSceneName: Main Game
+  mainMenuSceneName: Main menu
+  activateMainMenu: 0
+  deactivateMainMenu: 1
+  uiSceneName: UI
+  activateUI: 0
+  deactivateUI: 1
+  sortingGameSceneName: Sorting minigame
+  activateSortingGame: 0
+  deactivateSortingGame: 1
+  endScreenSceneName: EndScreen
+  activateEndScreen: 1
+  deactivateEndScreen: 0
+--- !u!4 &1264629443
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1264629441}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.8947, y: 1, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1787779443
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -426,6 +483,6 @@ PrefabInstance:
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
-  - {fileID: 1787779443}
   - {fileID: 47238600}
   - {fileID: 2051735197}
+  - {fileID: 1264629443}
