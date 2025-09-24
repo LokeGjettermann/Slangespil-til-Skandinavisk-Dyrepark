@@ -26,6 +26,7 @@ public class NewMonoBehaviourScript : MonoBehaviour
 
     private void OnNextButtonPressed(ClickEvent evnt)
     {
+        GameObject.Find("ButtonSound").GetComponent<SoundEffectPlayer>().PlaySoundEffect();
         sceneManagingDuringRuntime sceneChanger = /*GameObject.FindGameObjectWithTag("MenuItem").*/GetComponent<sceneManagingDuringRuntime>();
         sceneChanger.StartCoroutine(sceneChanger.LoadScenes());
 
