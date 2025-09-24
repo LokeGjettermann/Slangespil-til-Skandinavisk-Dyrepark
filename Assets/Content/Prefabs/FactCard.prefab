@@ -82,9 +82,9 @@ MeshRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingLayerID: -2114518981
+  m_SortingLayer: 2
+  m_SortingOrder: 1
   m_AdditionalVertexStreams: {fileID: 0}
 --- !u!114 &3513202882098073465
 MonoBehaviour:
@@ -187,10 +187,10 @@ SortingGroup:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7787062680935473206}
-  m_Enabled: 1
+  m_Enabled: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 0
   m_SortAtRoot: 0
 --- !u!1001 &3077684170273062138
 PrefabInstance:
@@ -200,10 +200,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -7059911032312374370, guid: 46d8b45079b9b9c4ab66f16e7cd48ec8, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: -5075623978297437654, guid: 46d8b45079b9b9c4ab66f16e7cd48ec8, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: -5706599560096003259, guid: 8c94da3d78175c644bbe6582636a2b29, type: 3}
+      objectReference: {fileID: 1288588677106841718, guid: fa88f7bfad8d36e4783be2aa3ff9e9d8, type: 3}
     - target: {fileID: -5075623978297437654, guid: 46d8b45079b9b9c4ab66f16e7cd48ec8, type: 3}
       propertyPath: m_SortingLayer
       value: 2
@@ -211,6 +215,10 @@ PrefabInstance:
     - target: {fileID: -5075623978297437654, guid: 46d8b45079b9b9c4ab66f16e7cd48ec8, type: 3}
       propertyPath: m_SortingLayerID
       value: -2114518981
+      objectReference: {fileID: 0}
+    - target: {fileID: -2594329096730677808, guid: 46d8b45079b9b9c4ab66f16e7cd48ec8, type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: -114338951551977502, guid: 46d8b45079b9b9c4ab66f16e7cd48ec8, type: 3}
       propertyPath: sprite1

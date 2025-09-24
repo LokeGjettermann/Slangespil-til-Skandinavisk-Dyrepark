@@ -91,48 +91,5 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 5022357548228885041, guid: 46d8b45079b9b9c4ab66f16e7cd48ec8, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 5209255796322094862}
-    - targetCorrespondingSourceObject: {fileID: 5022357548228885041, guid: 46d8b45079b9b9c4ab66f16e7cd48ec8, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 7631109622597305687}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 46d8b45079b9b9c4ab66f16e7cd48ec8, type: 3}
---- !u!1 &2705576409740796707 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5022357548228885041, guid: 46d8b45079b9b9c4ab66f16e7cd48ec8, type: 3}
-  m_PrefabInstance: {fileID: 6935223453006551314}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &5209255796322094862
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2705576409740796707}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1fb8a79b32df347438d1f5f91437d394, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::UserInput
-  screenCenter: 0
-  doRotation: 1
-  rotationMultiplier: 5
-  dragMultiplier: 0.005
-  movementMultiplier: 0.05
-  answerDistance: 6
-  destructionDistance: 12
---- !u!114 &7631109622597305687
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2705576409740796707}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0a1bcc312ca8b6d4887e2402b32cec78, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Scoring
-  snakeType: 0
