@@ -74,6 +74,10 @@ MonoBehaviour:
   startGameButtonName: StartGameBtn
   muteSoundButtonName: MuteBtn
   quitButtonName: QuitBtn
+  startBtnTextDanish: Start
+  startBtnTextEnglish: Begin
+  quitBtnTextDanish: Slut
+  quitBtnTextEnglish: Quit
 --- !u!114 &1746866843831521773
 MonoBehaviour:
   m_ObjectHideFlags: 0
