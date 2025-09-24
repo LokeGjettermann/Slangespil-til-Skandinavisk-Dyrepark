@@ -1,4 +1,5 @@
 using System.Collections;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UIElements;
@@ -30,6 +31,16 @@ public class MainMenuBehavior : MonoBehaviour
     private const string danishLanguageButtonName = "DanishLanguageBtn";
     [SerializeField]
     private string quitButtonName = "QuitBtn";
+    [Space]
+    [SerializeField]
+    private string startBtnTextDanish;
+    [SerializeField]
+    private string startBtnTextEnglish;
+    [SerializeField]
+    private string quitBtnTextDanish;
+    [SerializeField]
+    private string quitBtnTextEnglish;
+
     private SetLanguage languageManager;
     private Scene mainScene;
     #endregion
@@ -40,6 +51,7 @@ public class MainMenuBehavior : MonoBehaviour
         mainMenu = GetComponent<UIDocument>();
         startGameBtn = mainMenu.rootVisualElement.Q(startGameButtonName) as Button;
         startGameBtn.RegisterCallback<ClickEvent>(OnStartClicked);
+
         muteGameBtn = mainMenu.rootVisualElement.Q(muteSoundButtonName) as Button;
         muteGameBtn.RegisterCallback<ClickEvent>(OnMuteClicked);
         try
@@ -58,6 +70,16 @@ public class MainMenuBehavior : MonoBehaviour
         unmuteImg = new StyleBackground(unmuteBtnSprite);
         languageManager = ScriptableObject.CreateInstance<SetLanguage>();
 
+        if (languageManager.language == SetLanguage.Language.English)
+        {
+            startGameBtn.text = startBtnTextEnglish;
+            quitGameBtn.text = quitBtnTextEnglish;
+        }
+        else
+        {
+            startGameBtn.text = startBtnTextDanish;
+            quitGameBtn.text = quitBtnTextDanish;
+        }
         try
         {
             mainScene = SceneManager.GetSceneByName(GetComponent<sceneManagingDuringRuntime>().mainSceneName);
@@ -98,10 +120,14 @@ public class MainMenuBehavior : MonoBehaviour
             case englishLanguageButtonName:
                 Debug.Log("Language changed to English");
                 languageManager.ChangeLanguage(SetLanguage.Language.English);
+                startGameBtn.text = startBtnTextEnglish;
+                quitGameBtn.text = quitBtnTextEnglish;
                 break;
             case danishLanguageButtonName:
                 Debug.Log("Language changed to Danish");
                 languageManager.ChangeLanguage(SetLanguage.Language.Dansk);
+                startGameBtn.text = startBtnTextDanish;
+                quitGameBtn.text = quitBtnTextDanish;
                 break;
             default:
                 Debug.Log("ERROR: Could not find language from \"" + element.name + "\"");
