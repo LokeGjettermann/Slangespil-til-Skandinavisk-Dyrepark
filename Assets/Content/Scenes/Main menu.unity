@@ -265,11 +265,31 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 1746866843831521773, guid: bd8dbff7274ab464d8cc824d7da13877, type: 3}
+      propertyPath: activateUI
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1746866843831521773, guid: bd8dbff7274ab464d8cc824d7da13877, type: 3}
+      propertyPath: deactivateUI
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1746866843831521773, guid: bd8dbff7274ab464d8cc824d7da13877, type: 3}
       propertyPath: deactivateMainMenu
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1746866843831521773, guid: bd8dbff7274ab464d8cc824d7da13877, type: 3}
+      propertyPath: activateSortingGame
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1746866843831521773, guid: bd8dbff7274ab464d8cc824d7da13877, type: 3}
       propertyPath: deactivateEndScreen
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1746866843831521773, guid: bd8dbff7274ab464d8cc824d7da13877, type: 3}
+      propertyPath: deactivateSortingGame
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1746866843831521773, guid: bd8dbff7274ab464d8cc824d7da13877, type: 3}
+      propertyPath: activateTutorialScreen
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4261733982910004097, guid: bd8dbff7274ab464d8cc824d7da13877, type: 3}

@@ -31,6 +31,13 @@ public class sceneManagingDuringRuntime : MonoBehaviour
     private bool activateSortingGame = false;
     [SerializeField]
     private bool deactivateSortingGame = false;
+    [Header("Tutorial Screen")]
+    [SerializeField]
+    private string tutorialSceneName = "Tutorial";
+    [SerializeField]
+    private bool activateTutorialScreen = false;
+    [SerializeField]
+    private bool deactivateTutorialScreen = false;
     [Header("End Screen Menu")]
     [SerializeField]
     private string endScreenSceneName = "EndScreen";
@@ -84,6 +91,16 @@ public class sceneManagingDuringRuntime : MonoBehaviour
         if (deactivateSortingGame && SceneManager.GetSceneByName(sortingGameSceneName) != gameObject.scene && SceneManager.GetSceneByName(sortingGameSceneName).isLoaded)
         {
             SceneManager.UnloadSceneAsync(SceneManager.GetSceneByName(sortingGameSceneName));
+        }
+
+        // Tutorial
+        if (activateTutorialScreen && !SceneManager.GetSceneByName(tutorialSceneName).isLoaded)
+        {
+            SceneManager.LoadScene(tutorialSceneName, LoadSceneMode.Additive);
+        }
+        if (deactivateTutorialScreen && SceneManager.GetSceneByName(tutorialSceneName) != gameObject.scene && SceneManager.GetSceneByName(tutorialSceneName).isLoaded)
+        {
+            SceneManager.UnloadSceneAsync(SceneManager.GetSceneByName(tutorialSceneName));
         }
 
         // End screen
