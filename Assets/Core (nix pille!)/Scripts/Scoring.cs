@@ -28,6 +28,7 @@ public class Scoring : MonoBehaviour
         Debug.Log($"You answered {snakeType}, the correct answer was {this.snakeType}.");
         if (snakeType == this.snakeType)
         {
+            GameObject.Find("SoundManager").GetComponent<SoundEffectPlayer>().PlaySoundEffect();
             Debug.Log("you got it right.");
             GameBehavior_SO.AddToScore();
         }
