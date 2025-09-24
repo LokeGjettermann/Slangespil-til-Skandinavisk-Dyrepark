@@ -9,17 +9,20 @@ public enum SnakeType
 public class Scoring : MonoBehaviour
 {
     [SerializeField] private SnakeType snakeType;
+    AudioSource m_ScoreAudioSource;
+
+    public SnakeType GivenSnakeType { get => snakeType; set => snakeType = value; }
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-
+        m_ScoreAudioSource = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
     public void Answer(SnakeType snakeType)
@@ -27,8 +30,14 @@ public class Scoring : MonoBehaviour
         Debug.Log($"You answered {snakeType}, the correct answer was {this.snakeType}.");
         if (snakeType == this.snakeType)
         {
+            GameObject.Find("CardSuccessSound").GetComponent<SoundEffectPlayer>().PlaySoundEffect();
             Debug.Log("you got it right.");
             GameBehavior_SO.AddToScore();
+        }
+        else
+        {
+            GameObject.Find("CardFailSound").GetComponent<SoundEffectPlayer>().PlaySoundEffect();
+            Debug.Log("you got it wrong");
         }
     }
 }

@@ -137,7 +137,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!81 &47238598
 AudioListener:
   m_ObjectHideFlags: 0
@@ -325,6 +325,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Background
       objectReference: {fileID: 0}
+    - target: {fileID: 3386055628152382956, guid: f13eb078f8aff3f44a947173b98b0c51, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4150478994608406974, guid: f13eb078f8aff3f44a947173b98b0c51, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -458,6 +462,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2106014742067198679, guid: ee2f425bc353f9441b9ea12ff0282034, type: 3}
+      propertyPath: factCardPrefab
+      value: 
+      objectReference: {fileID: 7999763921011001035, guid: 296a516cb98fa8b439a9ce2ff1648215, type: 3}
+    - target: {fileID: 2106014742067198679, guid: ee2f425bc353f9441b9ea12ff0282034, type: 3}
+      propertyPath: pictureCardPrefab
+      value: 
+      objectReference: {fileID: 2705576409740796707, guid: 0945311b26fc97c4bac9d52b68bc2f97, type: 3}
     - target: {fileID: 3320164066541533446, guid: ee2f425bc353f9441b9ea12ff0282034, type: 3}
       propertyPath: m_Name
       value: CreateObject

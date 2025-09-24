@@ -3,11 +3,11 @@ using UnityEngine;
 public class CardBehaviour : MonoBehaviour
 {
     [SerializeField] private CardData_SO cardData;
+    private bool hasText;
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    void Awake()
     {
-        
+        hasText = !cardData.IsPictureCard;
         
     }
 

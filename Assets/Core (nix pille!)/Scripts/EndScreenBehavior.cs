@@ -33,6 +33,7 @@ public class EndScreenBehavior : MonoBehaviour
 
     private void OnNextButtonPressed(ClickEvent evnt)
     {
+        GameObject.Find("ButtonSound").GetComponent<SoundEffectPlayer>().PlaySoundEffect();
         Debug.Log("Clicked To Main Menu");
         Restart();
     }

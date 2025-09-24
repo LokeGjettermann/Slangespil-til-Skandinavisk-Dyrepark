@@ -67,11 +67,13 @@ public class MainMenuBehavior : MonoBehaviour
     }
     private void OnStartClicked(ClickEvent evt)
     {
+        GameObject.Find("ButtonSound").GetComponent<SoundEffectPlayer>().PlaySoundEffect();
         Debug.Log("Clicked Start");
         GetComponent<sceneManagingDuringRuntime>().StartCoroutine(GetComponent<sceneManagingDuringRuntime>().LoadScenes());
     }
     private void OnMuteClicked(ClickEvent evt)
     {
+        GameObject.Find("ButtonSound").GetComponent<SoundEffectPlayer>().PlaySoundEffect();
         //if the scene is run on its own, there will be no soundmanager to find
         if (manager != null && mainScene != null)
         {
@@ -93,6 +95,7 @@ public class MainMenuBehavior : MonoBehaviour
     }
     private void OnLanguageChange(ClickEvent evt, VisualElement element)
     {
+        GameObject.Find("ButtonSound").GetComponent<SoundEffectPlayer>().PlaySoundEffect();
         switch (element.name)
         {
             case englishLanguageButtonName:
@@ -110,7 +113,7 @@ public class MainMenuBehavior : MonoBehaviour
     }
     private void OnQuitGameClicked(ClickEvent evt)
     {
-        //not sure if we should just close the game here, don't want to shut down the entire app
+        Application.Quit();
     }
     #endregion
 }
