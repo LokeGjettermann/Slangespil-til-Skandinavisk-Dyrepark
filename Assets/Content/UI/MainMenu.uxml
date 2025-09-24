@@ -11,14 +11,12 @@
                 <ui:VisualElement name="QuitBtnIcon" class="menuBtnIcon" />
             </ui:Button>
         </ui:VisualElement>
-        <ui:VisualElement style="flex-grow: 1;">
-            <ui:VisualElement name="LanguageBtnHolder" style="flex-grow: 1; flex-direction: row;">
-                <ui:Button selectable="false" focusable="false" parse-escape-sequences="false" name="DanishLanguageBtn" class="languageBtn" style="background-image: url(&quot;project://database/Assets/Content/Sprites%20&amp;%20Animations/DanishFlagIcon.png?fileID=2800000&amp;guid=d57e6602d2fc8d1449cd1dbdc9187fae&amp;type=3#DanishFlagIcon&quot;);" />
-                <ui:Button name="EnglishLanguageBtn" class="languageBtn" style="background-image: url(&quot;project://database/Assets/Content/Sprites%20&amp;%20Animations/UKFlagIcon.png?fileID=2800000&amp;guid=a0f0a47028b7e6b4bb1b92206af3a943&amp;type=3#UKFlagIcon&quot;);" />
-            </ui:VisualElement>
-            <ui:VisualElement style="flex-grow: 1;">
-                <ui:Button name="MuteBtn" style="background-image: url(&quot;project://database/Assets/Content/Sprites%20&amp;%20Animations/mutedIcon.png?fileID=2800000&amp;guid=1f3072ff6c3146244be69c2398633bac&amp;type=3#mutedIcon&quot;); height: 30%; width: 20%; background-color: rgba(188, 188, 188, 0); border-top-width: 0; border-right-width: 0; border-bottom-width: 0; border-left-width: 0;" />
-            </ui:VisualElement>
+    </ui:VisualElement>
+    <ui:VisualElement style="flex-grow: 1; align-self: center; width: 100%; justify-content: flex-start; align-items: center;">
+        <ui:Button name="MuteBtn" style="background-image: url(&quot;project://database/Assets/Content/Sprites%20&amp;%20Animations/mutedIcon.png?fileID=2800000&amp;guid=1f3072ff6c3146244be69c2398633bac&amp;type=3#mutedIcon&quot;); height: 30%; width: 20%; background-color: rgba(188, 188, 188, 0); border-top-width: 0; border-right-width: 0; border-bottom-width: 0; border-left-width: 0;" />
+        <ui:VisualElement name="LanguageBtnHolder" style="flex-grow: 1; flex-direction: row; width: 50%; align-self: center; justify-content: center;">
+            <ui:Button selectable="false" focusable="false" parse-escape-sequences="false" name="DanishLanguageBtn" class="languageBtn" style="background-image: url(&quot;project://database/Assets/Content/Sprites%20&amp;%20Animations/DanishFlagIcon.png?fileID=2800000&amp;guid=d57e6602d2fc8d1449cd1dbdc9187fae&amp;type=3#DanishFlagIcon&quot;);" />
+            <ui:Button name="EnglishLanguageBtn" class="languageBtn" style="background-image: url(&quot;project://database/Assets/Content/Sprites%20&amp;%20Animations/UKFlagIcon.png?fileID=2800000&amp;guid=a0f0a47028b7e6b4bb1b92206af3a943&amp;type=3#UKFlagIcon&quot;);" />
         </ui:VisualElement>
     </ui:VisualElement>
 </ui:UXML>
