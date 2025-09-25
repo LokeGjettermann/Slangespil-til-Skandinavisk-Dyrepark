@@ -1,6 +1,6 @@
 <ui:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
     <ui:VisualElement style="flex-grow: 1;">
-        <ui:Label text="Du bliver stillet en række spørgsmål hvor du svare snog eller hugorm.&#10;Swipe til højre for at svare snog, og til venstre for at svare hugorm.&#10;hvis du er i tvivel, kan du kigge på udstopningen" name="Tutorial_Lbl" style="height: 112px; width: 344px; white-space: normal;" />
+        <ui:Label name="Tutorial_Lbl" style="height: 112px; width: 344px; white-space: normal;" />
         <ui:Button text="Næste" name="Next_Btn" />
     </ui:VisualElement>
 </ui:UXML>

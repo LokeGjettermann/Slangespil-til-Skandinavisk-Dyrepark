@@ -5,23 +5,35 @@ public class NewMonoBehaviourScript : MonoBehaviour
 {
     private UIDocument endScreen;
     private Button nextButton;
-    //private Label scoreLabel;
+    private Label tutorialLabel;
+    [SerializeField] [TextArea]
+    private string tutorialDanish;
+    [SerializeField]
+    [TextArea]
+    private string tutorialEnglish;
+    [SerializeField]
+    private string nextBtnTextDanish;
+    [SerializeField]
+    private string nextBtnTextEnglish;
+    
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         endScreen = GetComponent<UIDocument>();
         nextButton = endScreen.rootVisualElement.Q("Next_Btn") as Button;
-        //scoreLabel = endScreen.rootVisualElement.Q("FinalScore_Lbl") as Label;
         nextButton.RegisterCallback<ClickEvent>(OnNextButtonPressed);
-        //scoreLabel.text = $"{scoreTextEN} {GameBehavior_SO.PlayerScore}";
-
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        tutorialLabel = endScreen.rootVisualElement.Q("Tutorial_Lbl") as Label;
+        if (ScriptableObject.FindFirstObjectByType<SetLanguage>() != null && ScriptableObject.FindFirstObjectByType<SetLanguage>().language == SetLanguage.Language.Dansk)
+        {
+            tutorialLabel.text = tutorialDanish;
+            nextButton.text = nextBtnTextDanish;
+        }
+        else
+        {
+            tutorialLabel.text = tutorialEnglish;
+            nextButton.text = nextBtnTextEnglish;
+        }
     }
 
     private void OnNextButtonPressed(ClickEvent evnt)
