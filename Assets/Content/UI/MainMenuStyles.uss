@@ -1,6 +1,13 @@
 :root {
 }
 
+.unity-button:hover {
+    background-color: rgb(255, 255, 255);
+    scale: 1.1 1.1 1.1;
+    -unity-slice-scale: 1.1px;
+    transition-property: background-color;
+}
+
 .menuBtn {
     align-items: stretch;
     flex-direction: row;
