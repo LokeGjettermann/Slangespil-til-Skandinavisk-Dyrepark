@@ -6,6 +6,12 @@
     scale: 1.1 1.1 1.1;
     -unity-slice-scale: 1.1px;
     transition-property: background-color;
+    opacity: 1;
+    -unity-slice-left: 0;
+    -unity-slice-top: 0;
+    -unity-slice-right: 0;
+    -unity-slice-bottom: 0;
+    -unity-slice-type: sliced;
 }
 
 .menuBtn {
