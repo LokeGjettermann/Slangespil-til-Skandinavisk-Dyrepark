@@ -1,7 +1,10 @@
 fileFormatVersion: 2
-guid: bc1aa34bdb251da48880ccf85f52cf69
+guid: ebf467c3371fb4c4a9ce8d27cc3b11e4
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: -6555575649291838755
+    second: Cards_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -108,7 +111,29 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: Cards_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 496
+        height: 697
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dda52cd0eaae505a0800000000000000
+      internalID: -6555575649291838755
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     customData: 
     physicsShape: []
@@ -122,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Cards_0: -6555575649291838755
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -1,6 +1,8 @@
 <ui:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
-    <ui:VisualElement style="flex-grow: 1;">
-        <ui:Label name="Tutorial_Lbl" style="height: 112px; width: 344px; white-space: normal;" />
-        <ui:Button text="Næste" name="Next_Btn" />
+    <ui:VisualElement name="VisualElement" style="flex-grow: 1;">
+        <ui:VisualElement style="flex-grow: 1; max-height: 42px; background-color: rgb(204, 153, 3);" />
+        <ui:Label name="Tutorial_Lbl" style="height: 112px; width: auto; white-space: normal; top: 1px; -unity-text-align: upper-left;" />
+        <ui:VisualElement style="background-image: url(&quot;project://database/Assets/Content/Sprites%20&amp;%20Animations/skandinavisk-dyrepark-case-cover(1)%20(1).jpg?fileID=2800000&amp;guid=7afd2466468eda14cbdae474f97ec00d&amp;type=3#skandinavisk-dyrepark-case-cover(1) (1)&quot;); max-height: none; align-content: auto; flex-direction: column-reverse; position: relative; height: 126px;" />
+        <ui:Button text="Næste" name="Next_Btn" style="top: auto; background-color: rgb(204, 153, 3); border-top-left-radius: 5px; border-top-right-radius: 5px; border-bottom-right-radius: 5px; border-bottom-left-radius: 5px; width: 250px; align-self: center;" />
     </ui:VisualElement>
 </ui:UXML>

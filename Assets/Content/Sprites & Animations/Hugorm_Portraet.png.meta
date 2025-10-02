@@ -1,7 +1,10 @@
 fileFormatVersion: 2
-guid: bc1aa34bdb251da48880ccf85f52cf69
+guid: a2e805bb9a08fc84cbea2e8bb1ef8a4c
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: 7796676736298980335
+    second: Hugorm_Portraet_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -108,7 +111,29 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: Hugorm_Portraet_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 600
+        height: 400
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fe317afde2c533c60800000000000000
+      internalID: 7796676736298980335
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     customData: 
     physicsShape: []
@@ -122,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Hugorm_Portraet_0: 7796676736298980335
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
