@@ -1,8 +1,8 @@
 <ui:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
-    <ui:VisualElement name="VisualElement" style="flex-grow: 1;">
-        <ui:VisualElement style="flex-grow: 1; max-height: 42px; background-color: rgb(204, 153, 3);" />
-        <ui:Label name="Tutorial_Lbl" style="height: 112px; width: auto; white-space: normal; top: 1px; -unity-text-align: upper-left;" />
-        <ui:Button text="Start" name="Next_Btn" style="top: auto; background-color: rgb(204, 153, 3); border-top-left-radius: 5px; border-top-right-radius: 5px; border-bottom-right-radius: 5px; border-bottom-left-radius: 5px; width: 250px; align-self: center;" />
+    <ui:VisualElement style="flex-grow: 1; max-height: 42px; background-color: rgb(204, 153, 3);" />
+    <ui:VisualElement name="VisualElement" style="flex-grow: 1; max-height: 316px;">
+        <ui:Label name="Tutorial_Lbl" style="height: auto; width: auto; white-space: normal; top: auto; -unity-text-align: upper-center; align-self: auto; font-size: 16px; -unity-background-scale-mode: stretch-to-fill; margin-top: 0; margin-right: 0; margin-bottom: 0; margin-left: 0; min-height: 134px;" />
+        <ui:Button text="Start" name="Next_Btn" style="top: 17px; background-color: rgb(204, 153, 3); border-top-left-radius: 5px; border-top-right-radius: 5px; border-bottom-right-radius: 5px; border-bottom-left-radius: 5px; width: 233px; align-self: center; height: 0; min-width: 40px; max-width: 200px; max-height: 10px; min-height: 42px;" />
     </ui:VisualElement>
-    <ui:VisualElement style="flex-grow: 1; background-image: url(&quot;project://database/Assets/Content/Sprites%20&amp;%20Animations/Trae.png?fileID=2800000&amp;guid=1b17e87ecb7370d49b17d54a6282e655&amp;type=3#Trae&quot;); align-content: auto; justify-content: flex-end; margin-bottom: -48px; margin-top: 0; min-height: auto; max-height: 135px; background-size: 434% 110%; background-position-y: top 0%; -unity-background-scale-mode: scale-and-crop; -unity-slice-type: tiled;" />
+    <ui:VisualElement style="flex-grow: 1; background-image: url(&quot;project://database/Assets/Content/Sprites%20&amp;%20Animations/Trae.png?fileID=2800000&amp;guid=1b17e87ecb7370d49b17d54a6282e655&amp;type=3#Trae&quot;); align-content: auto; justify-content: flex-end; margin-bottom: -48px; margin-top: 0; min-height: 105px; max-height: 185px; background-size: 434% 110%; background-position-y: top 0%; -unity-background-scale-mode: scale-and-crop; -unity-slice-type: tiled; height: 68px;" />
 </ui:UXML>
