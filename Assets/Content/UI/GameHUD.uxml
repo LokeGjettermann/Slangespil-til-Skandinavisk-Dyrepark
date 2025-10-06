@@ -1,5 +1,5 @@
 <ui:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
-    <ui:VisualElement style="flex-grow: 1; height: auto; background-size: 100% 94%; min-height: auto; max-height: 41px; background-color: rgb(204, 153, 3);" />
+    <ui:VisualElement style="flex-grow: 1; height: auto; background-size: 100% 94%; min-height: auto; max-height: 69px; background-color: rgb(204, 153, 3);" />
     <ui:VisualElement style="flex-grow: 1; justify-content: flex-start; max-height: 51px;">
         <ui:Label text="Score: 0" name="Score_Lbl" style="font-size: 62px; -unity-font-style: bold; -unity-text-align: upper-center;" />
     </ui:VisualElement>
