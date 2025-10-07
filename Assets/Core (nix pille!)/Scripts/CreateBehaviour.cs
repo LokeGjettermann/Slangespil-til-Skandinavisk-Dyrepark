@@ -49,8 +49,8 @@ public class CreateBehaviour : MonoBehaviour
             else
             {
                 GameObject card = Instantiate(factCardPrefab, new Vector3(5, 0, 0), Quaternion.identity);
-                if (ScriptableObject.FindFirstObjectByType<SetLanguage>() != null && ScriptableObject.FindFirstObjectByType<SetLanguage>().language == SetLanguage.Language.Dansk) card.transform.GetChild(0).gameObject.GetComponent<TextMeshPro>().text = currentCard.CardTextDanish;
-                else card.transform.GetChild(0).gameObject.GetComponent<TextMeshPro>().text = currentCard.CardTextEnglish;
+                if (ScriptableObject.FindFirstObjectByType<SetLanguage>() != null && ScriptableObject.FindFirstObjectByType<SetLanguage>().language == SetLanguage.Language.Dansk) card.transform.GetChild(0).gameObject.GetComponent<TextMeshPro>().text = cardData.CardTextDanish;
+                else card.transform.GetChild(0).gameObject.GetComponent<TextMeshPro>().text = cardData.CardTextEnglish;
                 card.GetComponent<Scoring>().GivenSnakeType = cardData.TypeOfSnake;
             }
         }

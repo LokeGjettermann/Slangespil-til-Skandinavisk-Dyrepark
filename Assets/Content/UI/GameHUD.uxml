@@ -1,5 +1,7 @@
 <ui:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
-    <ui:VisualElement style="flex-grow: 1; height: auto; background-size: 100% 94%; min-height: auto; max-height: 69px; background-color: rgb(204, 153, 3);" />
+    <ui:VisualElement style="flex-grow: 1; height: auto; background-size: 100% 94%; min-height: auto; max-height: 69px; background-color: rgb(204, 153, 3);">
+        <ui:VisualElement style="flex-grow: 1; min-width: 70px; min-height: 60px; background-image: url(&quot;project://database/Assets/Content/Sprites%20&amp;%20Animations/Skandinavisk%20dyrepark.png?fileID=2800000&amp;guid=7457491ea1d0eb54ea358003c64683c5&amp;type=3#Skandinavisk dyrepark&quot;); align-self: flex-start; top: 36px; left: 23px;" />
+    </ui:VisualElement>
     <ui:VisualElement style="flex-grow: 1; justify-content: flex-start; max-height: 51px;">
         <ui:Label text="Score: 0" name="Score_Lbl" style="font-size: 62px; -unity-font-style: bold; -unity-text-align: upper-center;" />
     </ui:VisualElement>
