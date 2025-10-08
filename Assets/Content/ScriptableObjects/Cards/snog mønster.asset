@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d2f28e737742c4448ba511fcfeefaf4d, type: 3}
-  m_Name: hugorm_nave
+  m_Name: "snog m\xF8nster"
   m_EditorClassIdentifier: Assembly-CSharp::CardData_SO
-  isPictureCard: 0
-  sprite: {fileID: 0}
-  cardTextDanish: "Mit navn p\xE5 engelsk er Adder"
-  cardTextEnglish: My name in danish is Hugorm
-  snakeType: 1
+  isPictureCard: 1
+  sprite: {fileID: -2144131892657236139, guid: c4d7a4525f61eb248b161d69daf632b3, type: 3}
+  cardTextDanish: 
+  cardTextEnglish: 
+  snakeType: 0

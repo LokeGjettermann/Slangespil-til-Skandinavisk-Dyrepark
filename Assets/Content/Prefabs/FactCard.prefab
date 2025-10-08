@@ -115,8 +115,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4278190080
-  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
+    rgba: 4278426060
+  m_fontColor: {r: 0.8, g: 0.6, b: 0.011764706, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -139,7 +139,7 @@ MonoBehaviour:
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 0
+  m_fontStyle: 1
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
   m_textAlignment: 65535
@@ -207,7 +207,7 @@ PrefabInstance:
     - target: {fileID: -5075623978297437654, guid: 46d8b45079b9b9c4ab66f16e7cd48ec8, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: ebf467c3371fb4c4a9ce8d27cc3b11e4, type: 3}
+      objectReference: {fileID: 21300000, guid: d5852b01e55d73e4683315ec5868c7c2, type: 3}
     - target: {fileID: -5075623978297437654, guid: 46d8b45079b9b9c4ab66f16e7cd48ec8, type: 3}
       propertyPath: m_SortingLayer
       value: 2
