@@ -5,7 +5,7 @@
     <ui:VisualElement style="flex-grow: 1; justify-content: flex-start; max-height: 51px;">
         <ui:Label text="Score: 0" name="Score_Lbl" style="font-size: 62px; -unity-font-style: bold; -unity-text-align: upper-center;" />
     </ui:VisualElement>
-    <ui:VisualElement tabindex="0" style="flex-grow: 1; height: auto; max-height: 393px;" />
+    <ui:VisualElement tabindex="0" style="flex-grow: 1; height: auto; max-height: 393px; top: 30px;" />
     <ui:VisualElement name="VisualElement" style="flex-grow: 1; align-self: auto; flex-direction: column; align-items: stretch; align-content: flex-start; justify-content: center; width: 100%; max-height: 58px; background-image: none; background-position-y: bottom 100%; -unity-background-scale-mode: scale-and-crop; background-position-x: left 0; font-size: 25px; top: 37px;">
         <ui:Label text="Hugorm" name="Hugorm_Lbl" style="align-self: stretch; align-content: flex-start; justify-content: flex-start; align-items: flex-start; bottom: -22px; left: 0; height: 28px; -unity-font-style: bold; font-size: 30px;" />
         <ui:Label text="Snog" name="Snog_Lbl" style="align-self: stretch; align-content: flex-start; -unity-text-align: upper-right; align-items: auto; bottom: 0; right: 0; -unity-font-style: bold; height: 40px; top: -18px; font-size: 30px;" />
